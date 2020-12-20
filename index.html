@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
 
 </head>
@@ -51,7 +52,7 @@
           <div class="hero-container">
              <h1 class="hero-title">эффективные решения </br>для вашего бизнеса</h1>
             <div class="button"> <!--button-->
-             <button class="hero-button">Заказать услугу</button>
+             <button class="hero-button" data-modal-open>Заказать услугу</button>
             </div>
           </div>                
          </section>
@@ -102,9 +103,17 @@
               <div class="container">
                 <h2 class="title">Чем мы занимаемся</h2>
                         <ul class="our-work-list list">
-                            <li class="our-work-list-item"><img class="our-work-imges" src="./images/photo1.jpg" alt="photo1" width="370" height="294"/></li>
-                            <li class="our-work-list-item"><img class="our-work-imges" src="./images/photo2.jpg" alt="photo2" width="370" height="294"/></li>
-                            <li class="our-work-list-item"><img class="our-work-imges" src="./images/photo3.jpg" alt="photo3" width="370" height="294"/></li>
+                            <li class="our-work-list-item">
+                            <img class="our-work-imges" src="./images/photo1.jpg" alt="photo1" width="370" height="294"/>
+                            <p class="work-decription">Десктопные приложения</p>
+                          </li>
+                            <li class="our-work-list-item">
+                              <img class="our-work-imges" src="./images/photo2.jpg" alt="photo2" width="370" height="294"/>
+                              <p class="work-decription">Мобильные приложения</p>
+                            </li>
+                            <li class="our-work-list-item">
+                              <img class="our-work-imges" src="./images/photo3.jpg" alt="photo3" width="370" height="294"/>
+                              <p class="work-decription">Дизайнерские решения</p></li>
                         </ul>
                       </div>           
              </section>
@@ -385,6 +394,17 @@
                   </div> 
                   </footer>
                   
+
+                  <div class="backdrop is-hidden" data-modal>
+                    <div class="modal-window">
+                      <button type="button" class="close-btn" data-modal-close>
+                        <svg class="close">
+                          <use href="./images/sprite.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
         
+                  <script src="./js/modal.js"></script>
    </body>
     </html>
