@@ -529,8 +529,13 @@ transition: all 500ms linear;
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: transform 500ms linear;
 }
 
+.backdrop .is-hidden .modal-window {
+  transform: scale(0) rotateY(-180deg);
+  transform: rotateX (0);
+}
 .close-btn {
  position: absolute;
   right: 8px;
@@ -542,10 +547,14 @@ transition: all 500ms linear;
 box-sizing: border-box;
 border-radius: 50%;
 cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .close {
-  width: 11px;
-  height: 11px;
+  fill: #000000;
+  width: 18px;
+  height: 18px;
 }
 
 .is-hidden {
